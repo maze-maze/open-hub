@@ -1,3 +1,4 @@
-export const ComingSoonAlert = () => {
-  alert('Sorry...😔, this feature is currently under development.');
+/* eslint-disable no-alert */
+export function ComingSoonAlert() {
+  alert('Sorry...😔, this feature is currently under development.')
 }

@@ -1,7 +1,6 @@
-import HStack from '~/components/layout/stacks/h-stack/h-stack'
+import AddRepositoryButton from '../add-repository/components/add-repository-button'
 import { getRepositories } from '../get-repositories'
 import RepositoryItem from './repository-item'
-import AddRepositoryButton from '../add-repository/components/add-repository-button'
 
 export default async function RepositoryList() {
   const repositories = await getRepositories()

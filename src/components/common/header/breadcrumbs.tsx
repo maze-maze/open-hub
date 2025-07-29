@@ -18,7 +18,7 @@ export default function Breadcrumbs() {
       <nav>
         <Badge type="modern" size="md">
           <HStack size="sm">
-            <Link href={`/${organization_id}`} className='font-semibold'>
+            <Link href={`/${organization_id}`} className="font-semibold">
               {organization_id}
             </Link>
           </HStack>
@@ -31,11 +31,11 @@ export default function Breadcrumbs() {
     <nav>
       <Badge type="modern" size="md">
         <HStack size="sm">
-          <Link href={`/${organization_id}`} className='font-semibold'>
+          <Link href={`/${organization_id}`} className="font-semibold">
             {organization_id}
           </Link>
-          <span className='text-gray-500 text-sm'>/</span>
-          <Link href={`/${organization_id}/${repository_id}`} className='font-semibold'>
+          <span className="text-gray-500 text-sm">/</span>
+          <Link href={`/${organization_id}/${repository_id}`} className="font-semibold">
             {repository_id}
           </Link>
         </HStack>

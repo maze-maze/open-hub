@@ -11,9 +11,9 @@ export default function AddRepositoryButton() {
       onClick={() => AddRepository()}
     >
       <Container>
-        <h3 className='text-lg'>Add Repository</h3>
+        <h3 className="text-lg">Add Repository</h3>
         <div className="absolute bottom-4 right-6">
-          <Plus className='group-hover:rotate-90 transition-transform duration-300' />
+          <Plus className="group-hover:rotate-90 transition-transform duration-300" />
         </div>
       </Container>
     </button>

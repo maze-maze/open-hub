@@ -1,5 +1,5 @@
 import type { Repository } from '../repository.type'
-import { ArrowNarrowRight, ArrowRight, Plus, Star01 } from '@untitledui/icons'
+import { ArrowRight, Star01 } from '@untitledui/icons'
 import Link from 'next/link'
 import { Avatar } from '~/components/base/avatar/avatar'
 import Container from '~/components/layout/container/container'
@@ -30,11 +30,11 @@ export default function RepositoryItem({ repository }: { repository: Repository 
           </HStack>
           <p className="text-sm text-gray-500">{repository.description}</p>
           <HStack alignment="between">
-            <HStack size='sm' className=" text-text-primary/60">
-              <Star01 className='size-5' />
+            <HStack size="sm" className=" text-text-primary/60">
+              <Star01 className="size-5" />
               <span className="mt-0.5">{repository.stars}</span>
             </HStack>
-            <ArrowRight className='group-hover:translate-x-1 transition-transform duration-300' />
+            <ArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
           </HStack>
         </VStack>
       </Container>
