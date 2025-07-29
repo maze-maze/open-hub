@@ -47,7 +47,7 @@ const meta: Meta<typeof Button> = {
   parameters: {
     docs: {
       description: {
-        component: 'Modern button component with improved styling, built with React Aria Components and designed to match the existing design system.',
+        component: 'Versatile button component that supports both button and link functionality with href attribute. Built with React Aria Components and designed to match the existing design system.',
       },
     },
   },
@@ -58,7 +58,11 @@ const meta: Meta<typeof Button> = {
     },
     color: {
       control: 'select',
-      options: ['primary', 'secondary', 'tertiary', 'outline', 'danger', 'danger-secondary'],
+      options: ['primary', 'secondary', 'tertiary', 'outline', 'danger', 'danger-secondary', 'link-gray', 'link-color', 'link-destructive'],
+    },
+    href: {
+      control: 'text',
+      description: 'When provided, renders as a link instead of a button',
     },
     isLoading: {
       control: 'boolean',
@@ -67,6 +71,9 @@ const meta: Meta<typeof Button> = {
       control: 'boolean',
     },
     showTextWhileLoading: {
+      control: 'boolean',
+    },
+    noTextPadding: {
       control: 'boolean',
     },
   },
@@ -96,13 +103,26 @@ export const Sizes: Story = {
 
 export const Colors: Story = {
   render: () => (
-    <div className="flex flex-wrap items-center gap-4">
-      <Button color="primary">Primary</Button>
-      <Button color="secondary">Secondary</Button>
-      <Button color="tertiary">Tertiary</Button>
-      <Button color="outline">Outline</Button>
-      <Button color="danger">Danger</Button>
-      <Button color="danger-secondary">Danger Secondary</Button>
+    <div className="space-y-4">
+      <div>
+        <h3 className="text-sm font-medium mb-2">Button Colors</h3>
+        <div className="flex flex-wrap items-center gap-4">
+          <Button color="primary">Primary</Button>
+          <Button color="secondary">Secondary</Button>
+          <Button color="tertiary">Tertiary</Button>
+          <Button color="outline">Outline</Button>
+          <Button color="danger">Danger</Button>
+          <Button color="danger-secondary">Danger Secondary</Button>
+        </div>
+      </div>
+      <div>
+        <h3 className="text-sm font-medium mb-2">Link Colors</h3>
+        <div className="flex flex-wrap items-center gap-4">
+          <Button href="#" color="link-gray">Link Gray</Button>
+          <Button href="#" color="link-color">Link Color</Button>
+          <Button href="#" color="link-destructive">Link Destructive</Button>
+        </div>
+      </div>
     </div>
   ),
 }
@@ -144,6 +164,57 @@ export const LoadingStates: Story = {
       <Button isLoading iconLeading={DownloadIcon}>
         Downloading
       </Button>
+    </div>
+  ),
+}
+
+export const AsLinks: Story = {
+  render: () => (
+    <div className="space-y-6">
+      <div>
+        <h3 className="text-lg font-semibold mb-3">Button as Links</h3>
+        <div className="flex flex-wrap items-center gap-3">
+          <Button href="#home" color="primary">
+            Home Page
+          </Button>
+          <Button href="#about" color="secondary">
+            About Us
+          </Button>
+          <Button href="#contact" color="outline">
+            Contact
+          </Button>
+        </div>
+      </div>
+
+      <div>
+        <h3 className="text-lg font-semibold mb-3">Link Styles</h3>
+        <div className="flex flex-wrap items-center gap-3">
+          <Button href="#docs" color="link-color">
+            View Documentation
+          </Button>
+          <Button href="#help" color="link-gray">
+            Get Help
+          </Button>
+          <Button href="#delete" color="link-destructive">
+            Delete Account
+          </Button>
+        </div>
+      </div>
+
+      <div>
+        <h3 className="text-lg font-semibold mb-3">Links with Icons</h3>
+        <div className="flex flex-wrap items-center gap-3">
+          <Button href="#download" color="link-color" iconLeading={DownloadIcon}>
+            Download File
+          </Button>
+          <Button href="#external" color="link-gray" iconTrailing={ArrowRightIcon}>
+            External Link
+          </Button>
+          <Button href="#remove" color="link-destructive" iconLeading={TrashIcon}>
+            Remove Item
+          </Button>
+        </div>
+      </div>
     </div>
   ),
 }
@@ -208,8 +279,13 @@ export const RealWorldExamples: Story = {
 
 export const Interactive: Story = {
   args: {
-    children: 'Click me',
+    children: 'Interactive Button',
     color: 'primary',
     size: 'md',
+    href: undefined,
+    isLoading: false,
+    isDisabled: false,
+    showTextWhileLoading: false,
+    noTextPadding: false,
   },
 }
