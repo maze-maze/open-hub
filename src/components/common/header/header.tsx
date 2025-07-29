@@ -8,7 +8,7 @@ import Logo from './logo'
 export default function Header() {
   return (
     <header className="w-full border-b border-border-primary fixed top-0 z-30 backdrop-blur-md bg-primary/50">
-      <Container size="sm" className="container mx-auto">
+      <Container size="sm" className="sm:container mx-auto">
         <HStack alignment="between">
           <HStack>
             <Logo />

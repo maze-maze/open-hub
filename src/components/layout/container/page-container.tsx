@@ -7,7 +7,7 @@ export interface PageContainerProps {
 
 export default function PageContainer({ children }: PropsWithChildren<PageContainerProps>) {
   return (
-    <div className="container mx-auto pt-16 pb-8">
+    <div className="sm:container mx-auto pt-16 pb-8">
       <Container size="sm">
         {children}
       </Container>
