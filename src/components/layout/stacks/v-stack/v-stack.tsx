@@ -3,9 +3,9 @@ import { cx } from '~/utils/cx'
 
 const styles = {
   sizes: {
-    sm: 'space-y-1',
-    md: 'space-y-2',
-    lg: 'space-y-4',
+    sm: 'gap-1',
+    md: 'gap-2',
+    lg: 'gap-4',
   },
   alignments: {
     start: 'items-start',

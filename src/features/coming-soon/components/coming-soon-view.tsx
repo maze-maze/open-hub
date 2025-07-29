@@ -4,7 +4,7 @@ import { ComingSoonCard } from './coming-soon-card'
 
 export function ComingSoon() {
   return (
-    <Center className="h-[calc(100vh-10rem)]">
+    <Center className="h-dvh">
       <VStack alignment="center" size="md">
         <Center>
           <ComingSoonCard />

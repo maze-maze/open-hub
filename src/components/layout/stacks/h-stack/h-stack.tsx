@@ -3,15 +3,15 @@ import { cx } from '~/utils/cx'
 
 const styles = {
   sizes: {
-    sm: 'space-x-1',
-    md: 'space-x-2',
-    lg: 'space-x-4',
+    sm: 'gap-1',
+    md: 'gap-2',
+    lg: 'gap-4',
   },
   alignments: {
     start: 'justify-start',
     center: 'justify-center',
     end: 'justify-end',
-    between: 'justify-between',
+    between: 'justify-between w-full',
   },
 }
 
@@ -23,7 +23,7 @@ export interface HStackProps {
 
 export default function HStack({ children, size = 'md', alignment = 'start', className }: PropsWithChildren<HStackProps>) {
   return (
-    <div className={cx('flex flex-row items-center', styles.sizes[size], styles.alignments[alignment], className)}>
+    <div className={cx('flex flex-row items-center flex-wrap', styles.sizes[size], styles.alignments[alignment], className)}>
       {children}
     </div>
   )

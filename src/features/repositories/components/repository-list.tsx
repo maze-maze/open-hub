@@ -1,0 +1,20 @@
+import HStack from '~/components/layout/stacks/h-stack/h-stack'
+import { getRepositories } from '../get-repositories'
+import RepositoryItem from './repository-item'
+import AddRepositoryButton from '../add-repository/components/add-repository-button'
+
+export default async function RepositoryList() {
+  const repositories = await getRepositories()
+
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+      <AddRepositoryButton />
+      {repositories.map(repository => (
+        <RepositoryItem
+          key={`${repository.organizationId}/${repository.repositoryId}`}
+          repository={repository}
+        />
+      ))}
+    </div>
+  )
+}

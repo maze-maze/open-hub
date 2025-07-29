@@ -16,7 +16,7 @@ export interface ContainerProps {
 
 export default function Container({ children, size = 'md', className }: PropsWithChildren<ContainerProps>) {
   return (
-    <div className={cx(styles.sizes[size], className)}>
+    <div className={cx('w-full h-full', styles.sizes[size], className)}>
       {children}
     </div>
   )

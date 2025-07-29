@@ -1,6 +1,6 @@
 'use client'
 
-import { ArrowNarrowRight } from '@untitledui/icons'
+import { ArrowRight } from '@untitledui/icons'
 import { Button } from '~/components/base/buttons/button'
 import { Card } from '~/components/base/card/card'
 
@@ -15,7 +15,7 @@ export function ComingSoonCard() {
         Sorry...😔, this feature is currently under development and has limited functionality.
       </Card.Content>
       <Card.Footer>
-        <Button href="/cli/cli/issues" size="lg" iconTrailing={<ArrowNarrowRight />}>Try available features</Button>
+        <Button href="/cli/cli/issues" size="lg" iconTrailing={<ArrowRight />}>Try available features</Button>
       </Card.Footer>
     </Card>
   )

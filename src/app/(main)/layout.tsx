@@ -1,4 +1,4 @@
-import Header from '~/components/layout/header/header'
+import Header from '~/components/common/header/header'
 
 export default function MainLayout({
   children,
@@ -6,7 +6,7 @@ export default function MainLayout({
   children: React.ReactNode
 }>) {
   return (
-    <div className="min-h-screen overflow-hidden">
+    <div className="min-h-dvh overflow-hidden">
       <Header />
       {children}
     </div>
