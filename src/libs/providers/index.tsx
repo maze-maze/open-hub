@@ -1,6 +1,6 @@
-import { type PropsWithChildren } from "react";
-import { RouteProvider } from "./route-provider";
-import { ThemeProvider } from "./theme-provider";
+import type { PropsWithChildren } from 'react'
+import { RouteProvider } from './route-provider'
+import { ThemeProvider } from './theme-provider'
 
 export function Providers({ children }: PropsWithChildren) {
   return (
@@ -9,5 +9,5 @@ export function Providers({ children }: PropsWithChildren) {
         {children}
       </ThemeProvider>
     </RouteProvider>
-  );
+  )
 }

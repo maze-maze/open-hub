@@ -1,19 +1,19 @@
-"use client";
+'use client'
 
-import { useTheme } from "next-themes";
-import { Moon01, Sun } from "@untitledui/icons";
-import { Button } from "~/components/base/buttons/button";
+import { Moon01, Sun } from '@untitledui/icons'
+import { useTheme } from 'next-themes'
+import { Button } from '~/components/base/buttons/button'
 
 export function ThemeToggle() {
-    const { theme, setTheme } = useTheme();
+  const { theme, setTheme } = useTheme()
 
-    return (
-        <Button
-            aria-label="Toggle theme"
-            color="tertiary"
-            size="sm"
-            iconLeading={theme === "light" ? Moon01 : Sun}
-            onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-        />
-    );
+  return (
+    <Button
+      aria-label="Toggle theme"
+      color="tertiary"
+      size="sm"
+      iconLeading={theme === 'light' ? Moon01 : Sun}
+      onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+    />
+  )
 }

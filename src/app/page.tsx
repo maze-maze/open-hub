@@ -3,5 +3,5 @@ export default function Home() {
     <div className="">
       Open Hub
     </div>
-  );
+  )
 }

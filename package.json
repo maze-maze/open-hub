@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint:fix": "eslint --fix"
   },
   "dependencies": {
     "@untitledui/icons": "^0.0.19",
@@ -22,6 +23,7 @@
     "tailwindcss-react-aria-components": "^2.0.0"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^5.0.0",
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4.1.11",
     "@types/node": "^20",
