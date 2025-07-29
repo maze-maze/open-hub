@@ -1,5 +1,5 @@
-import { Badge } from "~/components/base/badges/badges";
-import Center from "~/components/layout/center/center";
+import { Badge } from '~/components/base/badges/badges'
+import Center from '~/components/layout/center/center'
 
 export default function Issues() {
   return (
